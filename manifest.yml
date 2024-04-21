@@ -1,0 +1,18 @@
+modules:
+  macro:
+    - key: first-app-hello-world
+      function: main
+      title: first_app
+      description: Inserts Hello world!
+  function:
+    - key: main
+      handler: index.run
+    - key: resolver
+      handler: handler.handler  # Update the handler path to point to the backend resolver
+permissions:
+  external:
+    fetch:
+      backend:
+        - https://jsonplaceholder.typicode.com
+app:
+  id: ari:cloud:ecosystem::app/66a182e8-4f92-4aac-8d40-5a263879ec6d
